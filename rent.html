@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>KazMoto – Аренда мотоцикл</title>
+<style>
+* { box-sizing: border-box; }
+body { margin:0; font-family: Arial,sans-serif; background: linear-gradient(135deg, black, red, orange); min-height:100vh; color:white; }
+header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background: rgba(0,0,0,0.7);}
+header h1{margin:0;font-size:32px;}
+header nav a{color:white;text-decoration:none;margin-left:25px;font-weight:bold;font-size:18px;}
+header nav a:hover{color:orange;}
+.hero{text-align:center;padding:100px 20px;background:rgba(0,0,0,0.4);}
+.hero h2{font-size:46px;margin-bottom:15px;}
+.hero p{font-size:22px;color:#ffd699;}
+.cards{display:flex;justify-content:center;gap:40px;padding:40px 20px 80px;flex-wrap:wrap;}
+.card{width:340px;background:rgba(0,0,0,0.6);border-radius:20px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,0.6);transition:0.4s;position:relative;}
+.card:hover{transform:translateY(-12px);}
+.card img{width:100%;height:220px;object-fit:cover;pointer-events:none;}
+.card-content{padding:25px;text-align:center;position:relative;z-index:2;}
+.card-content h3{font-size:26px;margin-bottom:10px;}
+.price{font-size:20px;color:orange;margin-bottom:10px;}
+.details{font-size:16px;color:#ffd699;margin-bottom:15px;line-height:1.5;}
+.btn{display:inline-block;padding:14px 35px;background:linear-gradient(45deg, orange, red);color:white;text-decoration:none;border-radius:30px;font-size:18px;font-weight:bold;transition:0.3s;cursor:pointer;position:relative;z-index:10;}
+.btn:hover{transform:scale(1.1);box-shadow:0 10px 25px rgba(255,140,0,0.8);}
+footer{background: rgba(0,0,0,0.75);padding:50px 20px;text-align:center;}
+footer p, footer a{color:white;text-decoration:none;font-size:18px;}
+footer a:hover{color:orange;}
+.info-section{max-width:1100px;margin:0 auto 80px;padding:40px 20px;background:rgba(0,0,0,0.4);border-radius:20px;color:#ffd699;}
+.info-section h2{text-align:center;font-size:34px;margin-bottom:20px;color:orange;}
+.info-section p{font-size:18px;line-height:1.7;}
+@media(max-width:768px){header{flex-direction:column;gap:15px;}.hero h2{font-size:36px;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>KazMoto</h1>
+<nav>
+<a href="index.html">Басты бет</a>
+<a href="rent.html">Аренда</a>
+<a href="sale.html">Сату</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Мотоцикл аренда</h2>
+<p>Күнделікті және ұзақ мерзімге</p>
+</section>
+
+<section class="cards">
+
+<!-- ===== 10 Мотоцикл Карточкалары ===== -->
+<div class="card">
+  <img src="images/rent1.jpg" alt="Sport Bike">
+  <div class="card-content">
+    <h3>Sport Bike 600cc</h3>
+    <p class="price">18 000 ₸ / күн</p>
+    <p class="details">Пробег: 10050 км<br>Залог: 150 000 ₸</p>
+    <a href="#" class="btn" data-bike="Sport Bike 600cc">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent2.jpg" alt="Naked Bike">
+  <div class="card-content">
+    <h3>Naked Bike 400cc</h3>
+    <p class="price">15 000 ₸ / күн</p>
+    <p class="details">Пробег: 8750 км<br>Залог: 120 000 ₸</p>
+    <a href="#" class="btn" data-bike="Naked Bike 400cc">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent3.jpg" alt="Touring Bike">
+  <div class="card-content">
+    <h3>Touring Bike 800cc</h3>
+    <p class="price">25 000 ₸ / күн</p>
+    <p class="details">Пробег: 12300 км<br>Залог: 200 000 ₸</p>
+    <a href="#" class="btn" data-bike="Touring Bike 800cc">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent4.jpg" alt="Cruiser Bike">
+  <div class="card-content">
+    <h3>Cruiser Bike 750cc</h3>
+    <p class="price">20 000 ₸ / күн</p>
+    <p class="details">Пробег: 9800 км<br>Залог: 180 000 ₸</p>
+    <a href="#" class="btn" data-bike="Cruiser Bike 750cc">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent5.jpg" alt="Adventure Bike">
+  <div class="card-content">
+    <h3>Adventure Bike 1000cc</h3>
+    <p class="price">28 000 ₸ / күн</p>
+    <p class="details">Пробег: 15000 км<br>Залог: 250 000 ₸</p>
+    <a href="#" class="btn" data-bike="Adventure Bike 1000cc">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent6.jpg" alt="BMW S1000RR">
+  <div class="card-content">
+    <h3>BMW S1000RR</h3>
+    <p class="price">45 000 ₸ / күн</p>
+    <p class="details">Пробег: 11000 км<br>Залог: 400 000 ₸</p>
+    <a href="#" class="btn" data-bike="BMW S1000RR">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent7.jpg" alt="Ducati Panigale V4">
+  <div class="card-content">
+    <h3>Ducati Panigale V4</h3>
+    <p class="price">55 000 ₸ / күн</p>
+    <p class="details">Пробег: 9500 км<br>Залог: 500 000 ₸</p>
+    <a href="#" class="btn" data-bike="Ducati Panigale V4">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent8.jpg" alt="Kawasaki Ninja H2">
+  <div class="card-content">
+    <h3>Kawasaki Ninja H2</h3>
+    <p class="price">60 000 ₸ / күн</p>
+    <p class="details">Пробег: 8700 км<br>Залог: 600 000 ₸</p>
+    <a href="#" class="btn" data-bike="Kawasaki Ninja H2">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent9.jpg" alt="Harley-Davidson Fat Boy">
+  <div class="card-content">
+    <h3>Harley-Davidson Fat Boy</h3>
+    <p class="price">40 000 ₸ / күн</p>
+    <p class="details">Пробег: 12500 км<br>Залог: 300 000 ₸</p>
+    <a href="#" class="btn" data-bike="Harley-Davidson Fat Boy">Брондау</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/rent10.jpg" alt="BMW R1250 GS Adventure">
+  <div class="card-content">
+    <h3>BMW R1250 GS Adventure</h3>
+    <p class="price">48 000 ₸ / күн</p>
+    <p class="details">Пробег: 14000 км<br>Залог: 350 000 ₸</p>
+    <a href="#" class="btn" data-bike="BMW R1250 GS Adventure">Брондау</a>
+  </div>
+</div>
+
+</section>
+
+<!-- ===== ЕСКЕРТУЛЕР ЖӘНЕ ЖАУАПКЕРШІЛІК ===== -->
+<section class="info-section">
+<h2>Аренда шарттары және жауапкершілік</h2>
+<p>
+• Аренда үшін міндетті түрде <b>залог</b> қалдырылады.<br>
+• Залогқа: <b>ақша + жеке куәлік (удостоверение) + үй құжаты</b> қабылданады.<br><br>
+
+• Мотоциклді дұрыс пайдаланбаған жағдайда немесе жол апатында <b>шығын клиент тарапынан өтеледі</b>.<br>
+• Мотоциклдің косметикалық сызаттары, жеңіл зақымдары залог есебінен ұсталады.<br>
+• Егер мотоцикл сынса немесе толық жарамсыз күйге келсе, клиент нарықтық құнын толық өтейді.<br><br>
+
+• Мотоциклді сақтау кезінде абай болу керек, оны сығып, құлатып алса, барлық шығын клиентке жүктеледі.<br>
+• Мотоциклді жарамды күйде қайтарған жағдайда залог толық қайтарылады.<br>
+• Барлық шарттар ресми <b>аренда келісімшартында</b> бекітіледі.<br><br>
+
+• <b>Маңызды:</b> Мотоциклді сақтауда және пайдалану кезінде ережелерді қатаң сақтау қажет. Жоғары жылдамдықпен басқару, рұқсат етілмеген жолдарда жүру немесе қате техникалық қолдану кезіндегі барлық шығындар клиентке жүктеледі.
+</p>
+</section>
+
+<footer>
+<p>📞 +7 708 751 4998</p>
+<p>💬 <a href="https://wa.me/77071234567">WhatsApp</a></p>
+</footer>
+
+<script>
+// WhatsApp автоматты брондау
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        const bike = this.getAttribute('data-bike');
+        const phone = '77071234567';
+        const message = `Сәлеметсіз бе! Мен ${bike} мотоциклін арендаға алғым келеді.`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    });
+});
+</script>
+
+</body>
+</html>
+

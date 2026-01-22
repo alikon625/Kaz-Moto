@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>KazMoto – Сату</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, black, red, orange);
+  color: white;
+}
+
+/* ===== ХЕДЕР ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.75);
+}
+
+header h1 { margin: 0; }
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+header a:hover { color: orange; }
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero h2 {
+  font-size: 46px;
+  margin: 0;
+}
+
+/* ===== СЛАЙДЕР КОНТЕЙНЕР ===== */
+.slider-wrapper {
+  position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.2);
+}
+
+.cards {
+  display: flex;
+  gap: 35px;
+  transition: transform 0.4s ease;
+}
+
+/* ===== КАРТОЧКАЛАР ===== */
+.card {
+  min-width: 320px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  flex-shrink: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: orange;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* ===== БАТЫРМА ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, orange, red);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255,140,0,0.8);
+}
+
+/* ===== СЛАЙДЕР БАТЫРМАЛАРЫ ===== */
+.slider-controls {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slider-controls .btn {
+  margin: 0 10px;
+}
+
+/* ===== ФУТЕР ===== */
+footer {
+  background: rgba(0,0,0,0.75);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover { color: orange; }
+
+iframe {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 900px;
+  height: 300px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* ===== ШАРТТАР БӨЛІМІ ===== */
+.info-section {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 40px 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 20px;
+  color: #ffd699;
+}
+
+.info-section h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: orange;
+}
+
+.info-section p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ===== МОБИЛЬ ===== */
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 15px; }
+  .hero h2 { font-size: 34px; }
+  .cards { gap: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>KazMoto</h1>
+  <nav>
+    <a href="index.html">Басты бет</a>
+    <a href="rent.html">Аренда</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Мотоцикл сату</h2>
+</section>
+
+<!-- ===== СЛАЙДЕР ===== -->
+<div class="slider-wrapper">
+  <div class="slider-controls">
+    <button class="prev btn">⟨ Алға</button>
+    <button class="next btn">Кейін ⟩</button>
+  </div>
+
+  <div class="cards">
+    <!-- Yamaha MT-07 -->
+    <div class="card">
+      <img src="images/sale1.jpg" alt="Yamaha MT-07">
+      <div class="card-content">
+        <h3>Yamaha MT-07</h3>
+        <p class="price">3 200 000 ₸</p>
+        <p>Макс. жылдамдық: 214 км/сағ</p>
+        <p>Бензобак: 14 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- Kawasaki Z900 -->
+    <div class="card">
+      <img src="images/sale2.jpg" alt="Kawasaki Z900">
+      <div class="card-content">
+        <h3>Kawasaki Z900</h3>
+        <p class="price">4 500 000 ₸</p>
+        <p>Макс. жылдамдық: 249 км/сағ</p>
+        <p>Бензобак: 17 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- BMW S1000RR -->
+    <div class="card">
+      <img src="images/sale3.jpg" alt="BMW S1000RR">
+      <div class="card-content">
+        <h3>BMW S1000RR</h3>
+        <p class="price">8 200 000 ₸</p>
+        <p>Макс. жылдамдық: 303 км/сағ</p>
+        <p>Бензобак: 16.5 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- Honda CBR600RR -->
+    <div class="card">
+      <img src="images/sale4.jpg" alt="Honda CBR600RR">
+      <div class="card-content">
+        <h3>Honda CBR600RR</h3>
+        <p class="price">3 800 000 ₸</p>
+        <p>Макс. жылдамдық: 259 км/сағ</p>
+        <p>Бензобак: 18 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- Suzuki GSX-R1000 -->
+    <div class="card">
+      <img src="images/sale5.jpg" alt="Suzuki GSX-R1000">
+      <div class="card-content">
+        <h3>Suzuki GSX-R1000</h3>
+        <p class="price">7 500 000 ₸</p>
+        <p>Макс. жылдамдық: 299 км/сағ</p>
+        <p>Бензобак: 16 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- Ducati Monster 1200 -->
+    <div class="card">
+      <img src="images/sale6.jpg" alt="Ducati Monster 1200">
+      <div class="card-content">
+        <h3>Ducati Monster 1200</h3>
+        <p class="price">9 000 000 ₸</p>
+        <p>Макс. жылдамдық: 250 км/сағ</p>
+        <p>Бензобак: 16 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- Triumph Street Triple RS -->
+    <div class="card">
+      <img src="images/sale7.jpg" alt="Triumph Street Triple RS">
+      <div class="card-content">
+        <h3>Triumph Street Triple RS</h3>
+        <p class="price">6 500 000 ₸</p>
+        <p>Макс. жылдамдық: 240 км/сағ</p>
+        <p>Бензобак: 17.4 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- BMW R1250 RS -->
+    <div class="card">
+      <img src="images/sale8.jpg" alt="BMW R1250 RS">
+      <div class="card-content">
+        <h3>BMW R1250 RS</h3>
+        <p class="price">7 800 000 ₸</p>
+        <p>Макс. жылдамдық: 200 км/сағ</p>
+        <p>Бензобак: 20 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- KTM 1290 Super Duke R -->
+    <div class="card">
+      <img src="images/sale9.jpg" alt="KTM 1290 Super Duke R">
+      <div class="card-content">
+        <h3>KTM 1290 Super Duke R</h3>
+        <p class="price">10 500 000 ₸</p>
+        <p>Макс. жылдамдық: 280 км/сағ</p>
+        <p>Бензобак: 16 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+    <!-- Aprilia RSV4 -->
+    <div class="card">
+      <img src="images/sale10.jpg" alt="Aprilia RSV4">
+      <div class="card-content">
+        <h3>Aprilia RSV4</h3>
+        <p class="price">9 500 000 ₸</p>
+        <p>Макс. жылдамдық: 299 км/сағ</p>
+        <p>Бензобак: 16.5 л</p>
+        <a class="btn" href="https://wa.me/77071234567">Сатып алу</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== ШАРТТАР БӨЛІМІ ===== -->
+<section class="info-section">
+  <h2>Сатып алу шарттары</h2>
+  <p>
+    1. Клиенттің жасы <b>21 жастан жоғары болуы</b> міндетті.<br><br>
+    2. Клиенттен <b>жеке куәлік</b> талап етіледі.<br><br>
+    3. Клиенттің <b>жүргізуші куәлігі</b> болуы қажет.<br><br>
+    4. Мотоциклді сақтау және тасымалдау кезінде абай болу керек.<br><br>
+    5. Барлық сатып алу және брондау шарттары ресми <b>келісімшартта</b> бекітіледі.<br><br>
+    6. Тестілеу кезінде жылдамдықты асырып, рұқсат етілмеген жолдарда жүру клиенттің жауапкершілігінде.
+  </p>
+</section>
+
+<footer>
+  <p>📞 +77087514998</p>
+  <p>💬 <a href="https://wa.me/77071234567">WhatsApp</a></p>
+  <p>✈️ <a href="https://t.me/kazmoto">Telegram</a></p>
+
+  <iframe src="https://www.google.com/maps?q=Астана&output=embed"></iframe>
+</footer>
+
+<script>
+const cards = document.querySelector('.cards');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const cardWidth = 355;
+let scrollPosition = 0;
+
+nextBtn.addEventListener('click', () => {
+  scrollPosition += cardWidth;
+  if(scrollPosition > cards.scrollWidth - cards.clientWidth) {
+    scrollPosition = cards.scrollWidth - cards.clientWidth;
+  }
+  cards.style.transform = `translateX(-${scrollPosition}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+  scrollPosition -= cardWidth;
+  if(scrollPosition < 0) scrollPosition = 0;
+  cards.style.transform = `translateX(-${scrollPosition}px)`;
+});
+</script>
+
+</body>
+</html>

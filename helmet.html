@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>KazMoto – Мото шлемдер</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg, black, red, orange);
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.7);
+}
+
+header h1{margin:0;}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:bold;
+}
+
+nav a:hover{color:orange;}
+
+.title{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.title h2{
+  font-size:42px;
+  color:orange;
+}
+
+/* ===== Шлемдер ===== */
+.helmets{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  padding:40px 20px 80px;
+}
+
+.helmet{
+  width:300px;
+  background:rgba(0,0,0,0.65);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,0.6);
+  transition:0.4s;
+}
+
+.helmet:hover{
+  transform:translateY(-12px);
+}
+
+.helmet img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.helmet-content{
+  padding:20px;
+  text-align:center;
+}
+
+.helmet-content h3{
+  margin:10px 0;
+  font-size:22px;
+}
+
+.price{
+  color:orange;
+  font-size:20px;
+  margin:10px 0 20px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  background:linear-gradient(45deg, orange, red);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+/* ===== Клиент пікірлері ===== */
+.reviews{
+  background: rgba(0,0,0,0.7);
+  padding:60px 20px;
+  text-align:center;
+}
+
+.reviews h2{
+  font-size:38px;
+  color:orange;
+  margin-bottom:40px;
+}
+
+.review-card{
+  background: rgba(255,255,255,0.1);
+  margin:20px auto;
+  max-width:600px;
+  padding:25px;
+  border-radius:15px;
+  text-align:left;
+}
+
+.review-card h4{
+  color:#ffd699;
+  margin-top:10px;
+}
+
+/* ===== Футер ===== */
+footer{
+  background:rgba(0,0,0,0.75);
+  text-align:center;
+  padding:40px 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>KazMoto</h1>
+  <nav>
+    <a href="index.html">Басты бет</a>
+    <a href="rent.html">Аренда</a>
+    <a href="sale.html">Сату</a>
+    <a href="helmet.html">Шлемдер</a>
+  </nav>
+</header>
+
+<section class="title">
+  <h2>Мотоциклге арналған шлемдер</h2>
+  <p>Қауіпсіздік – бірінші орында</p>
+</section>
+
+<section class="helmets">
+
+  <div class="helmet">
+    <img src="images/helmet1.jpg" alt="Full Face Helmet">
+    <div class="helmet-content">
+      <h3>Full Face Helmet</h3>
+      <p class="price">45 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+  <div class="helmet">
+    <img src="images/helmet2.jpg" alt="Modular Helmet">
+    <div class="helmet-content">
+      <h3>Modular Helmet</h3>
+      <p class="price">55 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+  <div class="helmet">
+    <img src="images/helmet3.jpg" alt="Open Face Helmet">
+    <div class="helmet-content">
+      <h3>Open Face Helmet</h3>
+      <p class="price">35 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+  <div class="helmet">
+    <img src="images/helmet4.jpg" alt="Off-Road Helmet">
+    <div class="helmet-content">
+      <h3>Off-Road Helmet</h3>
+      <p class="price">50 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+  <div class="helmet">
+    <img src="images/helmet5.jpg" alt="Retro Helmet">
+    <div class="helmet-content">
+      <h3>Retro Helmet</h3>
+      <p class="price">40 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+  <div class="helmet">
+    <img src="images/helmet6.jpg" alt="Jet Helmet">
+    <div class="helmet-content">
+      <h3>Jet Helmet</h3>
+      <p class="price">38 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+  <div class="helmet">
+    <img src="images/helmet7.jpg" alt="Carbon Fiber Helmet">
+    <div class="helmet-content">
+      <h3>Carbon Fiber Helmet</h3>
+      <p class="price">70 000 ₸</p>
+      <a href="https://wa.me/77087514998" class="btn">Сатып алу</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== Клиенттердің пікірлері ===== -->
+<section class="reviews">
+  <h2>Клиенттердің пікірлері</h2>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Шлем сапасы өте жоғары, жамылғысы берік және жеңіл.</p>
+    <h4>— Айгерім, Алматы</h4>
+  </div>
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Мотоциклмен бірге шлемді де алдық, қауіпсіздік сезімі керемет.</p>
+    <h4>— Нұрлан, Астана</h4>
+  </div>
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Жеткізу уақыты қысқа, менеджерлер өте сыпайы.</p>
+    <h4>— Данияр, Қарағанды</h4>
+  </div>
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Modular Helmet ыңғайлы және салмағы жеңіл, ұзақ сапарға жарайды.</p>
+    <h4>— Дина, Шымкент</h4>
+  </div>
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Бағасы қолжетімді, сапасы жоғары. Толығымен қанағаттандым.</p>
+    <h4>— Алия, Тараз</h4>
+  </div>
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>WhatsApp арқылы тапсырыс беру өте оңай болды, тез жауап алдым.</p>
+    <h4>— Ерлан, Павлодар</h4>
+  </div>
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Carbon Fiber Helmet өте жеңіл және берік. Қуаныштымын!</p>
+    <h4>— Жандос, Көкшетау</h4>
+  </div>
+
+</section>
+
+<footer>
+  <p>📞 +7 708 751 4998</p>
+  <p>WhatsApp арқылы тапсырыс</p>
+</footer>
+
+</body>
+</html>
