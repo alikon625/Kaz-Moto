@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>KazMoto – Мотоцикл аренда және сату</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, black, red, orange);
+  min-height:100vh;
+  color:white;
+}
+
+/* ===== Header ===== */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  background: rgba(0,0,0,0.7);
+}
+
+header h1 {
+  margin:0;
+  font-size:32px;
+}
+
+header nav a {
+  color:white;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:bold;
+  font-size:18px;
+}
+
+header nav a:hover { color:orange; }
+
+/* ===== Hero ===== */
+.hero {
+  text-align:center;
+  padding:100px 20px;
+  background:rgba(0,0,0,0.4);
+}
+
+.flicker-text {
+  font-size:52px;
+  font-weight:bold;
+  color:#ffd699;
+  text-shadow:0 0 5px #fff,0 0 10px orange,0 0 20px red,0 0 30px orange;
+  animation:flicker 3s infinite;
+}
+
+.flicker-subtext {
+  font-size:28px;
+  margin-top:10px;
+  animation:flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%,100% { opacity:1; }
+  50% { opacity:0.5; }
+}
+
+/* ===== Карточкалар ===== */
+.cards {
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:70px 20px;
+  flex-wrap:wrap;
+}
+
+.card {
+  width:340px;
+  background:rgba(0,0,0,0.6);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,0.6);
+  transition:0.4s;
+}
+
+.card:hover { transform:translateY(-15px); }
+
+.card img {
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:25px;
+  text-align:center;
+}
+
+.card-content h3 { font-size:26px; margin-bottom:10px; }
+.price { font-size:20px; color:orange; margin:15px 0; }
+.btn {
+  display:inline-block;
+  padding:14px 35px;
+  background:linear-gradient(45deg, orange, red);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+/* ===== Клиенттердің пікірлері ===== */
+.reviews {
+  padding:60px 20px;
+  text-align:center;
+  background: rgba(0,0,0,0.6);
+}
+
+.reviews h2 {
+  font-size:38px;
+  margin-bottom:40px;
+  color:orange;
+}
+
+.review-card {
+  max-width:600px;
+  margin:20px auto;
+  padding:20px;
+  border-radius:15px;
+  background: rgba(255,255,255,0.1);
+  font-size:16px;
+}
+
+.review-card h4 { color:#ffd699; font-size:14px; margin-top:10px; }
+
+/* ===== Төлемдер / Банктер ===== */
+.payments {
+  padding:70px 20px;
+  text-align:center;
+  background: rgba(0,0,0,0.65);
+}
+
+.payments h2 {
+  font-size:36px;
+  color:orange;
+  margin-bottom:40px;
+}
+
+.payment-grid {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+}
+
+.payment-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,140,0,0.12));
+  border-radius:16px;
+  padding:20px;
+  min-width:240px;
+  font-size:16px;
+  font-weight:500;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-align:center;
+  box-shadow:0 8px 18px rgba(0,0,0,0.35);
+  transition:0.3s;
+}
+
+.payment-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:0 12px 25px rgba(255,140,0,0.6);
+}
+
+.payment-card p { font-size:14px; color:#fff; line-height:1.4; margin:0; }
+
+.payment-card a.btn { font-size:15px; padding:10px 22px; }
+
+.credit {
+  margin-top:50px;
+  font-size:18px;
+  text-align:center;
+}
+
+.credit span { color:orange; font-weight:bold; }
+
+footer {
+  background: rgba(0,0,0,0.75);
+  padding:50px 20px;
+  text-align:center;
+}
+
+footer iframe {
+  margin-top:30px;
+  width:100%;
+  max-width:900px;
+  height:320px;
+  border:none;
+  border-radius:20px;
+}
+
+@media(max-width:768px){
+  header{ flex-direction:column; gap:15px; }
+  .flicker-text{font-size:36px;}
+  .flicker-subtext{font-size:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>KazMoto</h1>
+  <nav>
+    <a href="index.html">Басты бет</a>
+    <a href="rent.html">Аренда</a>
+    <a href="sale.html">Сату</a>
+    <a href="helmet.html">Шлемдер</a> <!-- менюде ғана көрінеді -->
+  </nav>
+</header>
+
+<section class="hero">
+  <h2 class="flicker-text">Мотоцикл аренда және сату</h2>
+  <h3 class="flicker-subtext">Қазақстан бойынша сенімді сервис</h3>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <img src="images/rent1.jpg">
+    <div class="card-content">
+      <h3>Мотоцикл аренда</h3>
+      <p class="price">18 000 ₸ / күн</p>
+      <a href="rent.html" class="btn">Аренда</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/sale1.jpg">
+    <div class="card-content">
+      <h3>Мотоцикл сату</h3>
+      <p class="price">3 000 000 ₸ бастап</p>
+      <a href="sale.html" class="btn">Сатып алу</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Клиент пікірлері ===== -->
+<section class="reviews">
+  <h2>Клиенттердің пікірлері</h2>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Мотоцикл арендасы өте ыңғайлы, техника таза әрі жаңа.</p>
+    <h4>— Айгерім, Алматы</h4>
+  </div>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Kaspi арқылы төледім, барлығы тез әрі түсінікті болды.</p>
+    <h4>— Нұрлан, Астана</h4>
+  </div>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Кредитке алдым, 20 минутта мақұлданды. Керемет сервис!</p>
+    <h4>— Данияр, Қарағанды</h4>
+  </div>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Менеджерлер өте сыпайы, барлығы түсінікті болды.</p>
+    <h4>— Дина, Шымкент</h4>
+  </div>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Рассрочка 0%, жасырын төлем жоқ. Өте ыңғайлы!</p>
+    <h4>— Алия, Тараз</h4>
+  </div>
+
+  <div class="review-card">
+    <p>⭐⭐⭐⭐⭐<br>Бағалары қолжетімді, сервис сапасы жоғары.</p>
+    <h4>— Жандос, Көкшетау</h4>
+  </div>
+</section>
+
+<!-- ===== Банктер / төлемдер ===== -->
+<section class="payments">
+  <h2>Қабылданатын төлемдер және кредит/рассрочка</h2>
+
+  <div class="payment-grid">
+
+    <div class="payment-card">
+      💳 <strong>Kaspi QR / Перевод</strong>
+      <p>KaspiPay арқылы бірден төлеңіз немесе кредитке өтінім беріңіз</p>
+      <a href="https://kaspi.kz/pay/" target="_blank" class="btn">Төлеу / Одобрение</a>
+    </div>
+
+    <div class="payment-card">
+      💸 <strong>Қолма-қол төлем</strong>
+      <p>Дүкенде немесе жеткізу кезінде қабылданады</p>
+      <span class="btn" style="cursor:default; opacity:0.8;">Төлеу тек оффлайн</span>
+    </div>
+
+    <div class="payment-card">
+      🏦 <strong>Халық Банк</strong>
+      <p>Кредитке немесе рассрочкаға өтінім беріңіз</p>
+      <a href="https://halykbank.kz/ru/loans" target="_blank" class="btn">Кредит / Рассрочка</a>
+    </div>
+
+    <div class="payment-card">
+      🏦 <strong>Freedom Bank</strong>
+      <p>Жылдық ставка 14–18%, мақұлдау 15–30 минутта</p>
+      <a href="https://www.freedombank.kz/ru/personal/loans/" target="_blank" class="btn">Кредит / Одобрение</a>
+    </div>
+
+    <div class="payment-card">
+      🏦 <strong>Forte / Jusan Bank</strong>
+      <p>Онлайн кредит немесе рассрочка алу</p>
+      <a href="https://www.forte.kz/loan" target="_blank" class="btn">Кредит / Одобрение</a>
+    </div>
+  </div>
+
+  <div class="credit">
+    <p><span>Рассрочка:</span> 0% (3–6 ай)</p>
+    <p><span>Кредит:</span> 14% – 18% жылдық ставка</p>
+    <p>⏱ Мақұлдау уақыты: 15–30 минут</p>
+    <p>📌 Барлық төлем түрлері сенімді және қауіпсіз</p>
+  </div>
+</section>
+
+<footer>
+  <p>📞 +7 708 751 4998</p>
+  <p>
+    <a href="https://wa.me/77087514998">WhatsApp</a> |
+    <a href="https://t.me/kazmoto">Telegram</a>
+  </p>
+  <iframe src="https://www.google.com/maps?q=Астана+Сатпаева+15&output=embed"></iframe>
+</footer>
+
+</body>
+</html>
